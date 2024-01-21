@@ -16,6 +16,18 @@ if(window.innerWidth > 1100){
           }
         }
     });
+
+    const buttonComment = document.querySelector('.commentScrol');
+    const buttonDescr = document.querySelectorAll('.descrScroll')
+    console.log(window.pageYOffset);
+    buttonComment.addEventListener('click', function(){
+      scrollTo(0, 700)
+    })
+    buttonDescr.forEach(function(item){
+      item.addEventListener("click", function(){
+        scrollTo(0, 1360)
+      })
+    })
 }else{
   document.addEventListener('DOMContentLoaded', function() {
     // Отримання посилання на тег <link> за його id
